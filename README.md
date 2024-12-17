@@ -1,2 +1,2 @@
-# Projekt---FP
+# Projekt-FP
 Sigma total irregularity of triangle-free graphs
