@@ -121,18 +121,47 @@ verjetnostjo (določeno z Boltzmanovo porazdelitvijo).Sčasoma se temperatura zm
 sprejemanja slabših rešitev visoka, nato pa čedalje nižja. Algoritem je enostaven za implementacijo ter zelo prilagodljiv različnim 
 optimizacijskim problemom, prednost pa je tudi, da omogoča pobeg iz lokalnih minimumov. Vendar pa je uspešnost močno odvisna od 
 začetne temperature in hitrosti ohlajanja, če temperatura upada prehitro ali prepočasi naši rezultati lahko niso točni.
+
 Koda za opisani algoritem je shranjena v datoteki $\texttt{simulated\_annealing.ipynb}$.
 
 \subsubsection{Tabu search}
+Tabu Search je metahevristični algoritem za optimizacijske probleme, ki uporablja zgodovino iskanja in omogoča raziskovanje večjega 
+iskalnega prostora. Osnovna ideja je uporaba tabu seznama, ki beleži že obiskane rešitve in preprečuje vračanje k njim. Algoritem 
+deluje na principu lokalnega iskanja z najboljšo možno izboljšavo, pri čemer se rešitve filtrirajo glede na tabu pogoje – dovoljene 
+so samo tiste, ki niso na tabu seznamu, razen če so boljše od trenutne najboljše rešitve. Dolžina tabu seznama (tabu tenure) vpliva 
+na širino raziskovanja: krajši seznam omogoča bolj lokalno iskanje, daljši pa raziskovanje širšega prostora. Poleg kratkoročnega spomina 
+TS uporablja tudi dolgoročni spomin, ki spremlja pogostost in kakovost rešitev ter usmerja iskanje v manj raziskane ali obetavne regije 
+prostora rešitev. Slabost TS je lahko možnost prevelikega izogibanja določenim rešitvam, kar potencialno 
+lahko vodi do izgube optimalnih rešitev. 
 
-
+Koda za opisani algoritem je shranjena v datoteki $\texttt{tabu\_search.ipynb}$.
 
 \subsubsection{Variable neighborhood search}
-\subsubsection{Mešani algoritem - SA in VNS}
-\subsection{Ugotovitve}
+Algoritem VNS temelji na ideji, da se različne soseščine obnašajo kot različne "pokrajine" iskalnega prostora. Sestavljen je iz treh faz:
+\begin{enumerate}
+      \item Naključna izbira sosednjega območja (faza perturbacije).
+      \item Generiranje novih rešitev v izbrani soseščini, vsakič poskusimo izboljšati rešitev znotraj izbrane soseščine (lokalno iskanje).
+      \item Če je nova rešitev boljša od trenutne, jo sprejmemo, sicer ne naredimo ničesar. Znova začnemo iskanje (faza premika).
+\end{enumerate}
+Prednost VNS je dobro ravnotežje med iskanjem v širino in globino, saj združuje iskanje v lokalnem območju in raziskovanje novih območij. Vendar
+pa lahko naletimo do težav, če izberemo napačno soseščino, kar lahko vodi do neučinkovitega iskanja. Poleg tega pa ima algoritem tudi večjo
+računsko zahtevnost prav zaradi uporabe več sosedskih struktur.
 
-\section{Zaključek}
+Koda za opisani algoritem je shranjena v datoteki \\$\texttt{variable\_neighborhood\_search.ipynb}$.
+
+\subsubsection{Mešani algoritem - SA in VNS}
+Navsezadnje sva implementirala tudi algoritem, v katerem sva združila simulated annealing in variable neighborhood search (koda se nahaja
+v datoteki $\texttt{mix\_SA\_VNS.ipynb}$). Začetek je enak kot pri VNS, torej najprej izberemo sosednje območje in nato izvedemo lokalno iskanje. 
+V nadaljevanju pa pri sprejemanju nove rešitve vključimo še SA. Če je nova rešitev boljša od trenutne, jo sprejmemo, slabše rešitve pa sprejmemo
+z verjetnostjo, določeno z Botzmanovo porazdelitvijo. 
+
+\subsection{Ugotovitve}
+Z vsemi zgornjimi metahevrističnimi algoritmi sva potrdila najino hipotezo, da imajo optimalni zvezdasti grafi, dobljeni v datoteki 
+$\texttt{star\_graphs.ipynb}$, res največje možne STI. Pri implementaciji sva namreč vsakič začela z zvezdastim grafom, ki naj 
+bi po najini hipotezi že bil optimalen. Od tam naprej sva sva se z vsakim algoritmom le še bolj oddaljevala od od maksimalne STI, ki
+jo je imel izhodiščen graf. 
 
 \section{Viri}
+
 
 \end{document}
