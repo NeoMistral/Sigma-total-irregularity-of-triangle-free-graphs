@@ -71,14 +71,14 @@ vse grafe brez ciklov dolžine 3. Kode za to lahko najdete na repozitoriju v dat
 $\texttt{small\_graphs\_sage.ipynb}$.
 
 Po generiranju sva izračunala STI za majhne grafe (do 13 vozlišč), poiskala tiste, pri katerih je bila vrednost najvišja ter jih izrisala. 
-Na podlagi dobljenih rezultatov sva oblikovala hipotezo, da so grafi z največjo STI zvezdasti grafi.
+Na podlagi dobljenih rezultatov sva oblikovala hipotezo, da so grafi z največjo STI zvezdasti grafi, torej polni dvodelni grafi.
 
 \subsection{Zvezdasti grafi}
 Opazko glede oblike sva želela preveriti v datoteki $\texttt{star\_graphs.ipynb}$. S tem  namenom sva s funkcijo $\texttt{generate\_star\_graph}$
-najprej generirala zvezdaste grafe z različnim številom osrednjih vozlišč. Nato sva med temi grafi poiskala tiste, ki imajo največjo vrednost STI 
+najprej generirala polne dvodelne grafe z različnim številom osrednjih vozlišč. Nato sva med temi grafi poiskala tiste, ki imajo največjo vrednost STI 
 ter na ta način dobila optimalno število osrednjih vozlišč. 
 
-Na spodnjih slikah so prikazani optimalni zvezdasti grafi stopenj 10, 14 in 17, ki imajo največjo možno STI.
+Na spodnjih slikah so prikazani optimalni polni dvodelni grafi stopenj 10, 14 in 17, ki imajo največjo možno STI.
 
 \begin{figure}[h]
       \centering
@@ -98,17 +98,23 @@ Na spodnjih slikah so prikazani optimalni zvezdasti grafi stopenj 10, 14 in 17, 
       \end{minipage}
   \end{figure}  
 
-Zanimalo naju je tudi, kako narašča število centralnih vozlišč glede na stopnjo grafa in pa kakšno je razmerje med centralnimi 
-in robnimi vozlišči. Opazila sva, da se število centralnih vozlišč enakomerno (skoraj linearno) povečuje in ima specifično 
-stopničasto strukturo, skoki pa se pojavljajo na približno enakih razmakih. To si lahko razlagamo na način, da dodajanje novih 
+Zanimalo naju je tudi, kako narašča število centralnih vozlišč (t.j. število vozlišč v manjši množožici) glede na stopnjo grafa 
+in pa kakšno je razmerje med centralnimi in robnimi vozlišči. Opazila sva, da se število centralnih vozlišč enakomerno (skoraj linearno) 
+povečuje in ima specifično stopničasto strukturo, skoki pa se pojavljajo na približno enakih razmakih (na približno 7 
+do 8 novih vozlišč se doda novo centralno vozlišče). To si lahko razlagamo na način, da dodajanje novih 
 vozlišč v graf najprej povečuje število robnih vozlišč, ko dosežemo določen prag, pa se doda še eno centralno vozlišče. 
+Izkaže se, da se delež vozlišč v manjši množici dvodelnega grafa z večanjem števila vseh vozlišč giblje med 14\% in 16\%, torej konvergira.
 Za boljšo vizualizacijo sva narisala tudi dva grafa.
 
 \begin{figure}[h!]
-      \includegraphics[width=\textwidth]{graf_st_centralnih.png}
-      \includegraphics[width=\textwidth]{graf_razmerje_med_centralnimi_in_robnimi.png}
+    \centering
+    \includegraphics[width=0.85\textwidth]{graf_st_centralnih.png}
 \end{figure}
 
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.85\textwidth]{graf_razmerje_med_centralnimi_in_robnimi.png}
+\end{figure}
 
 \section{Testiranje hipotez}
 \subsection{Metahevristični algoritmi}
@@ -155,11 +161,18 @@ v datoteki $\texttt{mix\_SA\_VNS.ipynb}$). Začetek je enak kot pri VNS, torej n
 V nadaljevanju pa pri sprejemanju nove rešitve vključimo še SA. Če je nova rešitev boljša od trenutne, jo sprejmemo, slabše rešitve pa sprejmemo
 z verjetnostjo, določeno z Botzmanovo porazdelitvijo. 
 
-\subsection{Ugotovitve}
-Z vsemi zgornjimi metahevrističnimi algoritmi sva potrdila najino hipotezo, da imajo optimalni zvezdasti grafi, dobljeni v datoteki 
-$\texttt{star\_graphs.ipynb}$, res največje možne STI. Pri implementaciji sva namreč vsakič začela z zvezdastim grafom, ki naj 
+\section{Ugotovitve}
+Z vsemi zgornjimi metahevrističnimi algoritmi sva potrdila najino hipotezo, da imajo polni dvodelni grafi, dobljeni v datoteki 
+$\texttt{star\_graphs.ipynb}$, res največje možne STI. Pri implementaciji sva namreč vsakič začela s polnim dvodelnim grafom, ki naj 
 bi po najini hipotezi že bil optimalen. Od tam naprej sva sva se z vsakim algoritmom le še bolj oddaljevala od od maksimalne STI, ki
 jo je imel izhodiščen graf. 
+
+Ugotovila sva tudi, da razmerje med obema stranema dvodelnega grafa konvergira ko povečujemo stopnjo grafa. Delež vozlišč v manjši 
+množici je nekje 14 - 16 \%, delež v večji množici pa 84 - 86 \%. Opazila sva še, da se število centralnih vozlišč (t.j. moč manjše množice 
+vozlišč dvodelnega grafa) enakomerno povečuje: za grafe do 10 (t.j. $n = 1, \ldots ,10$) vozlišč imamo 1 centralno vozlišče, nato 2 centralni
+vozlišči za $n = 10, \ldots ,16$, novo centralno vozlišče se doda nadaljne še pri $n = 17, n =24, n = 31$ itd.
+Skoki se torej pojavljajo na približno enakih razmakih; na vsakih 7 do 8 novih vozlišč se v manjšo množico vozlišč polnega dvodelnega 
+grafa doda še eno vozlišče.
 
 \nocite{Luke2013Metaheuristics}
 
