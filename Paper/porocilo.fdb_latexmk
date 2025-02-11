@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex porocilo"] 1739306319 "porocilo.aux" "porocilo.bbl" "porocilo" 1739306582
+["bibtex porocilo"] 1739306319 "porocilo.aux" "porocilo.bbl" "porocilo" 1739306662
   "C:/Program Files/MiKTeX/bibtex/bst/bibtex/plain.bst" 1291864736 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
   "porocilo.aux" 1739306581 2274 6d1e72e4c6aa74702795603af2e4b362 "pdflatex"
   "viri_projekt_fp.bib" 1738331985 249 237586cb77f89e475b2bbe918573e493 ""
   (generated)
-  "porocilo.blg"
   "porocilo.bbl"
-["pdflatex"] 1739306576 "c:/Users/nenas/OneDrive/Documents/projekt_fp/repozitorij/Sigma-total-irregularity-of-triangle-free-graphs/Paper/porocilo.tex" "c:/Users/nenas/OneDrive/Documents/projekt_fp/repozitorij/Sigma-total-irregularity-of-triangle-free-graphs/Paper/porocilo.pdf" "porocilo" 1739306582
+  "porocilo.blg"
+["pdflatex"] 1739306576 "c:/Users/nenas/OneDrive/Documents/projekt_fp/repozitorij/Sigma-total-irregularity-of-triangle-free-graphs/Paper/porocilo.tex" "c:/Users/nenas/OneDrive/Documents/projekt_fp/repozitorij/Sigma-total-irregularity-of-triangle-free-graphs/Paper/porocilo.pdf" "porocilo" 1739306662
   "C:/Program Files/MiKTeX/fonts/tfm/jknappen/ec/ecbx1200.tfm" 993058358 3200 b8d69bc738e5ef3e08cefeef3109ff56 ""
   "C:/Program Files/MiKTeX/fonts/tfm/jknappen/ec/ecbx1440.tfm" 993058360 3196 0b37fa3083e15c57cfa8c4ff52f2807a ""
   "C:/Program Files/MiKTeX/fonts/tfm/jknappen/ec/ecbx1728.tfm" 993058362 3204 d35cb76836b6cb4ed404dd64a550530d ""
@@ -112,7 +112,7 @@
   "C:/Users/nenas/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1604949252 10284484 39e3dc39d3094657eff080d7860acbe4 ""
   "C:/Users/nenas/AppData/Local/MiKTeX/pdftex/config/pdftex.map" 1604949188 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "c:/Users/nenas/OneDrive/Documents/projekt_fp/repozitorij/Sigma-total-irregularity-of-triangle-free-graphs/Paper/porocilo.aux" 1739306581 2274 6d1e72e4c6aa74702795603af2e4b362 ""
-  "c:/Users/nenas/OneDrive/Documents/projekt_fp/repozitorij/Sigma-total-irregularity-of-triangle-free-graphs/Paper/porocilo.tex" 1739306575 11170 e16a57311c94afc0ec0ffa2ee2952335 ""
+  "c:/Users/nenas/OneDrive/Documents/projekt_fp/repozitorij/Sigma-total-irregularity-of-triangle-free-graphs/Paper/porocilo.tex" 1739306659 11170 e16a57311c94afc0ec0ffa2ee2952335 ""
   "graf_dve_centralni.png" 1738265085 44206 5f217f60bc766b988751829715f126c1 ""
   "graf_eno_centralno.png" 1738265030 27195 36fd5e91a3e8967c88da8e33a6ebe94a ""
   "graf_razmerje_med_centralnimi_in_robnimi.png" 1738265000 39620 676739671c9315b631c6680025d29998 ""
@@ -121,11 +121,11 @@
   "porocilo.aux" 1739306581 2274 6d1e72e4c6aa74702795603af2e4b362 "pdflatex"
   "porocilo.bbl" 1739306320 273 40521f6e10bcf75596ac5c54936ce976 "bibtex porocilo"
   "porocilo.out" 1739306581 720 b45b72bffb0acbb50299c23f7e9ad529 "pdflatex"
-  "porocilo.tex" 1739306575 11170 e16a57311c94afc0ec0ffa2ee2952335 ""
+  "porocilo.tex" 1739306659 11170 e16a57311c94afc0ec0ffa2ee2952335 ""
   (generated)
-  "c:/Users/nenas/OneDrive/Documents/projekt_fp/repozitorij/Sigma-total-irregularity-of-triangle-free-graphs/Paper/porocilo.pdf"
   "porocilo.out"
   "c:/Users/nenas/OneDrive/Documents/projekt_fp/repozitorij/Sigma-total-irregularity-of-triangle-free-graphs/Paper/porocilo.log"
-  "porocilo.aux"
   "porocilo.pdf"
+  "c:/Users/nenas/OneDrive/Documents/projekt_fp/repozitorij/Sigma-total-irregularity-of-triangle-free-graphs/Paper/porocilo.pdf"
   "porocilo.log"
+  "porocilo.aux"
